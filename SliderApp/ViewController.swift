@@ -9,9 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var dispLabel: UILabel!
+    @IBAction func slide(_ sender: UISlider) {
+        setSlidLavel(slideValue: sender.value)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSlidLavel()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +26,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func setSlidLavel(slideValue: Float = 0.5) {
+        dispLabel.text = "\(slideValue)"
+    }
 
 }
 
