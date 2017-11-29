@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dispLabel: UILabel!
     @IBAction func slide(_ sender: UISlider) {
-        setSlidLavel(slideValue: sender.value)
+        setSlideLabel(slideValue: sender.value)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSlidLavel()
+        setSlideLabel()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setSlidLavel(slideValue: Float = 0.5) {
+    func setSlideLabel(slideValue: Float = 0.5) {
         dispLabel.text = "\(slideValue)"
     }
 
